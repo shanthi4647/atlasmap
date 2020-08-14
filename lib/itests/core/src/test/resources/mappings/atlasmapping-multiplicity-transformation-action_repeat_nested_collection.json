@@ -19,15 +19,9 @@
       "mapping": [
         {
           "jsonType": "io.atlasmap.v2.Mapping",
+          "expression": "REPEAT(count(${json-source-repeat:/rootArray<>/nestedArray<>/arrayField}), ${json-source-repeat:/simpleField})",
           "inputFieldGroup": {
             "jsonType": "io.atlasmap.v2.FieldGroup",
-            "actions": [
-              {
-                "Expression": {
-                  "expression": "Repeat(count(${1}), ${0})"
-                }
-              }
-            ],
             "field": [
               {
                 "jsonType": "io.atlasmap.json.v2.JsonField",
